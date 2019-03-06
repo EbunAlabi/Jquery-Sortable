@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+
+    <FORM NAME="myform" ACTION="weekendDates.js" METHOD="GET">
+      Enter your CAI: <BR>
+      <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+          Enter Start Date: <BR>
+          <INPUT TYPE="date" NAME="datebox" VALUE=""><P>
+              Enter Number of Days:<BR>
+              <INPUT TYPE="number" NAME="noDaysbox" VALUE=""><P>
+      <INPUT TYPE="button" NAME="button" Value="Submit" onClick="testResults(this.form)">
+      </FORM>
+      </body>
+
+      <script src="moment.js">
+ 
+  
+        </script>
+  <SCRIPT LANGUAGE="JavaScript">
+      
+      function testResults(form){
+        var startVac = form.datebox.value;
+          //var ends = form.datebox2.value;
+          var noDays = form.noDaysbox.value;
+          let days = noDays;
+        let modStartVac = moment(startVac).format();
+        let endVac = moment(modStartVac).add(noDays,'d');
+      console.log(startVac);
+      console.log(noDays);
+      console.log(endVac);
+      let pubHol = ["2019-01-01","2019-03-04","2019-03-25","2019-03-03"];
+      console.log(pubHol);
+      let weekCount = 0;
+      let checkDate =  moment(modStartVac).format();
+      let vacDays = [];
+
+        //vac array
+        for (let k = modStartVac; k<=endVac; moment(k).add(1,'d')){
+            vacDays.push(moment(k).format());
+            k= k.clone().add(1,'d');
+        }
+        console.log('the array:', vacDays);
+
+
+      console.log('this is before loop: ',checkDate);
+        for(var i = 0; i<=days; i++){
+            //console.log('this is before conditions: ',checkDate);
+           for (let j=0; j<pubHol.length; j++){
+               if (checkDate == pubHol[j]){
+                let checkDate =  moment(modStartVac).add(1, 'd');
+               }
+           }
+           checkDate =  moment(modStartVac).add(1, 'd');
+        }
+        console.log('this is the new res: ',checkDate);
+      }
+         
+      </SCRIPT>
+      </html>
+
