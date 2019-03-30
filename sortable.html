@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Sortable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+  #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+  #sortable li span { position: absolute; margin-left: -1.3em; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+
+  } );
+
+
+  
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable">
+  <div class="div1" style="border: solid 3px blue" id ="0"><li class="ui-state-default-1"> <span class="ui-icon ui-icon-arrowthick-2-n-s">1 -</span>Item 1</li></div>
+  <div class="div2" style="border: solid 3px purple" id ="1"><li class="ui-state-default-2"><span class="ui-icon ui-icon-arrowthick-2-n-s">2 - </span>Item 2</li></div>
+  <div class="div3" style="border: solid 3px yellow" id ="2"><li class="ui-state-default-3"><span class="ui-icon ui-icon-arrowthick-2-n-s">3 - </span>Item 3</li></div>
+  <div class="div4" style="border: solid 3px olive" id ="3"><li class="ui-state-default-4"> <span class="ui-icon ui-icon-arrowthick-2-n-s">4 -</span>Item 4</li></div>
+  <div class="div5" style="border: solid 3px orchid" id ="4"><li class="ui-state-default-5"> <span class="ui-icon ui-icon-arrowthick-2-n-s">5 -</span>Item 5</li></div>
+  <div class="div6" style="border: solid 3px goldenrod" id ="5"><li class="ui-state-default-6"> <span class="ui-icon ui-icon-arrowthick-2-n-s">6 -</span>Item 6</li></div>
+  <div class="div7" style="border: solid 3px red" id ="6"><li class="ui-state-default-7"><span class="ui-icon ui-icon-arrowthick-2-n-s">7 - </span>Item 7</li></div>
+</ul>
+ 
+ <script src="jQuery.js"></script>
+</body>
+</html>
